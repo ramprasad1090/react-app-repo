@@ -1,0 +1,14 @@
+{
+  "name": "reactapp",
+  "version": "1.0.0",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server ./build"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "react-scripts": "^5.0.1"
+  }
+}
