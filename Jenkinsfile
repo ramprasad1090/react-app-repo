@@ -45,6 +45,7 @@ pipeline {
                         sudo docker rm react-app || true
                         sudo docker run -d -p 80:80 --name react-app ${DOCKERHUB_REPO_PROD}:latest
                         EOF
+                        echo "remote execution successfull"
                         """
                     }
                 }
