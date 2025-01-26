@@ -14,7 +14,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    sh "sudo docker build -t ${DOCKERHUB_REPO_DEV}:${env.BRANCH_NAME} ."
+                    sh "docker build -t ${DOCKERHUB_REPO_DEV}:${env.BRANCH_NAME} ."
                 }
             }
         }
