@@ -39,7 +39,7 @@ pipeline {
                 script {
                     if (env.BRANCH_NAME == 'main') {
                         sh """
-                        ssh -o StrictHostKeyChecking=no ubuntu@3.94.163.231 <<EOF
+                        ssh -i /var/lib/jenkins/linux_instance.pem ubuntu@3.94.163.231 <<EOF
                         sudo docker pull ${DOCKERHUB_REPO_PROD}:latest
                         sudo docker stop react-app || true
                         sudo docker rm react-app || true
