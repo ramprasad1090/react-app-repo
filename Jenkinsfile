@@ -14,7 +14,6 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    sh "git clone https://github.com/ramprasad1090/react-app-repo.git"
                     sh "docker build -t ${DOCKERHUB_REPO_DEV}:${env.BRANCH_NAME} -f /var/lib/jenkins/react-app-repo/Dockerfile ."
                 }
             }
