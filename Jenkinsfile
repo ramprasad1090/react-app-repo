@@ -24,6 +24,7 @@ pipeline {
                 script {
                     docker.withRegistry('', 'dockerhub') {
                         if (env.BRANCH_NAME == 'dev') {
+                            sh "whoami"
                             sh "docker tag ${DOCKERHUB_REPO_DEV}:${env.BRANCH_NAME} ${DOCKERHUB_REPO_DEV}:latest"
                             sh "docker push ${DOCKERHUB_REPO_DEV}:latest"
                         } else if (env.BRANCH_NAME == 'main') {
